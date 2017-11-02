@@ -70,10 +70,23 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             break;
 
         case 'bark':
-            var reciever = args[0];
+            var recieverID = args[0].replace(/\D/g,'');
+            var recieverName;
+            var members = bot.servers[serverID].members;
+            var found = false;
+            var i = 0;
+
+            while(!found)
+            {
+                if (members[i] === recieverID)
+                {
+                    recieverName = members[i].nick;
+                    found = true;
+                }
+            }
             bot.sendMessage({
                 to: channelID,
-                message: '<@' + userID + '> barked at ' + reciever
+                message: '**' + user + '** barked at **' + recieverName + '**'
             });
             break;
     }
