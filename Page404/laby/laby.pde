@@ -7,14 +7,14 @@ int labyrinthe [][] ={{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                        {1,0,1,0,1,1,0,1,1,1,1,1,0,1,0,1,0,1,1},
                        {1,0,1,0,1,1,0,0,0,1,0,0,0,1,0,1,0,1,1},
                        {1,0,1,0,0,1,0,1,0,0,0,1,1,1,0,1,0,1,1},
-                       {1,0,1,1,4,1,0,1,1,1,0,5,0,0,0,1,0,1,1},
+                       {1,0,1,1,4,1,0,1,1,1,5,0,0,0,0,1,0,1,1},
                        {1,0,2,0,0,1,0,1,1,1,0,1,1,1,1,1,0,1,1},
                        {1,1,1,1,1,1,0,1,1,1,0,1,0,0,0,0,0,1,1},
                        {1,1,0,0,0,1,0,1,0,0,0,1,1,1,1,1,1,1,1},
                        {1,1,0,1,0,0,0,1,0,1,1,1,1,1,0,0,0,0,1},
-                       {1,1,0,1,1,1,1,1,3,1,0,1,0,0,0,1,1,0,1},
-                       {1,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,2,0,1},
-                       {1,1,1,0,1,1,1,1,1,1,1,0,4,0,1,4,0,1,1},
+                       {1,1,0,1,1,1,1,1,0,1,0,1,0,0,0,1,1,0,1},
+                       {1,1,0,0,0,0,0,0,4,0,0,1,3,1,0,0,2,0,1},
+                       {1,1,1,0,1,1,1,1,1,1,1,0,0,0,1,4,0,1,1},
                        {1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1},
                        {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
                       
@@ -32,6 +32,8 @@ PImage obscurite;
 int tailleCahceObscurite;
 int nbColonnes, nbLignes;
 PImage fondCarte;
+int orientationVoiture;
+PImage voiture;
 
 void setup(){
   fondCarte = loadImage ("img/Carte.png");
@@ -42,8 +44,8 @@ void setup(){
   //background (255);
   image(fondCarte,0,0); 
   caseX = 3;  caseY = 2;
-  posX = caseX*tailleCase + tailleCase/2;  
-  posY = caseY*tailleCase + tailleCase/2;
+  posX = caseX*tailleCase;  
+  posY = caseY*tailleCase;
   finX = 17;  finY = 15;
   jeuEnCours = true;
   deplacement = 5;
@@ -51,6 +53,8 @@ void setup(){
   codeValide = false;
   obscurite = loadImage ("img/obscurite.png");
   tailleCahceObscurite = 800;
+  voiture = loadImage("img/voiture.png");
+  orientationVoiture = 0;
 }
 
 void draw(){
@@ -59,7 +63,6 @@ void draw(){
       deplacer_personnage();
     }
     image(fondCarte,0,0); 
-    dessiner_arrivee();
     dessiner_personnage();
     jeuFini();
     if(!codeValide)
@@ -70,35 +73,31 @@ void draw(){
 
 void dessiner_personnage(){
   fill(0,255,0);
-  ellipse(posX, posY, taillePerso, taillePerso);
-}
-
-void dessiner_arrivee(){
-  fill(200,255,0);
-  rect(finX*tailleCase, finY*tailleCase, tailleCase, tailleCase);
+  int tmp = 35*orientationVoiture;
+  copy(voiture, tmp, 0, tailleCase , tailleCase,posX, posY, tailleCase, tailleCase);
 }
 
 void keyPressed(){
   switch (key) {
       case 'z' : 
-      //while(labyrinthe[caseY-1][caseX] == 0)
       if(labyrinthe[caseY-1][caseX] == 0 || labyrinthe[caseY-1][caseX] == 2 || labyrinthe[caseY-1][caseX] == 4 || labyrinthe[caseY-1][caseX] == 5)
         debuterDeplacement(0,-1);
+        orientationVoiture = 3;
       break; 
       case 's' : 
-      //while(labyrinthe[caseY+1][caseX] == 0)
       if(labyrinthe[caseY+1][caseX] == 0 || labyrinthe[caseY+1][caseX] == 2 || labyrinthe[caseY+1][caseX] == 3 || labyrinthe[caseY+1][caseX] == 5)
         debuterDeplacement(0,1);
+        orientationVoiture = 2;
         break; 
       case 'd' : 
-      //while(labyrinthe[caseY][caseX+1] == 0)
       if(labyrinthe[caseY][caseX+1] == 0 || labyrinthe[caseY][caseX+1] == 3 || labyrinthe[caseY][caseX+1] == 4 || labyrinthe[caseY][caseX+1] == 5)
         debuterDeplacement(1,0);
+        orientationVoiture = 0;
         break; 
       case 'q' : 
-      //while(labyrinthe[caseY][caseX-1] == 0)
       if(labyrinthe[caseY][caseX-1] == 0 || labyrinthe[caseY][caseX-1] == 2 || labyrinthe[caseY][caseX-1] == 3 || labyrinthe[caseY][caseX-1] == 4)
         debuterDeplacement(-1,0);
+        orientationVoiture = 1;
         break;
       case 'a' : 
       if(konamiCode == 9)
@@ -149,11 +148,11 @@ void keyPressed(){
 }
 
 void deplacer_personnage(){
-    if(posX != caseX*tailleCase + tailleCase/2){
+    if(posX != caseX*tailleCase){
       if(deplacementEnCours == 1) {posX += deplacement;}
       else if(deplacementEnCours == 2) {posX -= deplacement;}
     }
-    else if(posY != caseY*tailleCase + tailleCase/2){
+    else if(posY != caseY*tailleCase){
       if(deplacementEnCours == 3) {posY += deplacement;}
       else if(deplacementEnCours == 4) {posY -= deplacement;}
     }
@@ -161,8 +160,8 @@ void deplacer_personnage(){
 }
 
 void debuterDeplacement(int x, int y){
-    posX = caseX*tailleCase + tailleCase/2;
-    posY = caseY*tailleCase + tailleCase/2;
+    posX = caseX*tailleCase;
+    posY = caseY*tailleCase;
     if(x == 1) {caseX++; deplacementEnCours = 1;}
     else if(x == -1) {caseX--; deplacementEnCours = 2;}
     if(y == 1) {caseY++; deplacementEnCours = 3;}
