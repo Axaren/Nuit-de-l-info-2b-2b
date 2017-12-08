@@ -130,7 +130,7 @@ header h1, footer
 
 /*Généralité*/
 
-.Page{
+#Page{
   text-align: center;
 }
 
@@ -141,9 +141,221 @@ p {
 /*Header*/
 
 header{
-background: url("Image_Fond/motif-web") repeat;
+background: url("image/motif-web.jpg") repeat;
 }
 
 /*Corp*/
+section img{
+  display: inline-block;
+}
+section{
+  background: url("image/motif-web1.jpg") repeat center;
+  }
+#case1{
+  top:650px;
+  left: 78px;
+}
+#case2{
+  top:643px;
+  left: 205px;
+}
+#case3{
+  top:643px;
+  left: 63px;
+}/*
+#case4{
+  top:643px;
+  left: 63px;
+}
+#case5{
+  top:643px;
+  left: 63px;
+}
+#case6{
+  top:643px;
+  left: 63px;
+}
+#case7{
+  top:643px;
+  left: 63px;
+}
+#case8{
+  top:643px;
+  left: 63px;
+}
+#case9{
+  top:643px;
+  left: 63px;
+}
+#case10{
+  top:643px;
+  left: 63px;
+}
+#case11{
+  top:643px;
+  left: 63px;
+}
+#case12{
+  top:643px;
+  left: 63px;
+}
+#case13{
+  top:643px;
+  left: 63px;
+}
+#case14{
+  top:643px;
+  left: 63px;
+}
+#case15{
+  top:643px;
+  left: 63px;
+}
+#case16{
+  top:643px;
+  left: 63px;
+}
+#case17{
+  top:643px;
+  left: 63px;
+}
+#case18{
+  top:643px;
+  left: 63px;
+}
+#case19{
+  top:643px;
+  left: 63px;
+}
+#case20{
+  top:643px;
+  left: 63px;
+}
+#case21{
+  top:643px;
+  left: 63px;
+}
+#case22{
+  top:643px;
+  left: 63px;
+}
+#case23{
+  top:643px;
+  left: 63px;
+}
+#case24{
+  top:643px;
+  left: 63px;
+}*/
 
 /*Footer*/
+
+footer{
+  background: url("image/motif-web.jpg") repeat;
+}
+
+footer p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 22px;
+  padding-top: 22px;
+}
+.body {
+
+	font: 87.5%/1.5em 'Lato', sans-serif;
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td {
+	padding: 0;
+}
+
+
+.calendar-container {
+  margin-left: 35%;
+	width: 450px;
+}
+
+.calendar-container header {
+	border-radius: 1em 1em 0 0;
+	background: #e66b6b;
+	color: #fff;
+	padding: 3em 2em;
+  text-align: center;
+}
+
+.day {
+	font-size: 4em;
+	font-weight: 900;
+	line-height: 1em;
+}
+
+.month {
+	font-size: 2em;
+	line-height: 1em;
+	text-transform: lowercase;
+}
+
+.calendar {
+	background: rgba(59,59,59,0.25);
+	border-radius: 0 0 1em 1em;
+	-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+	color: #555;
+	display: inline-block;
+	padding: 4em;
+}
+
+.calendar thead {
+	color: #e66b6b;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.calendar td {
+	padding: .5em 1em;
+	text-align: center;
+}
+
+.calendar tbody td:hover {
+	background: #cacaca;
+	color: #fff;
+}
+
+.current-day {
+	color: #e66b6b;
+}
+
+.prev-month,
+.next-month {
+	color: #cacaca;
+}
+
+.ring-left,
+.ring-right {
+	position: absolute;
+	top: 230px;
+}
+
+.ring-left { left: 2em; }
+.ring-right { right: 2em; }
+
+.ring-left:before,
+.ring-left:after,
+.ring-right:before,
+.ring-right:after {
+	background: #fff;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+	box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+	content: "";
+	display: inline-block;
+	margin: 8px;
+	height: 32px;
+	width: 8px;
+}
