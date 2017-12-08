@@ -101,7 +101,7 @@ header p
 {
   margin-top: 0px;
 }
-header h1
+header h1, footer
 {
   font-family: 'advent_probold';
 }
