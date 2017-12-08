@@ -83,9 +83,29 @@
     font-style: normal;
 
 }
-h1
+h1,h2,h3,h4,h5,h6
 {
   font-family: 'advent_probold';
+}
+h1{  font-size: 80px;}
+h2{  font-size: 70px;}
+h3{  font-size: 60px;}
+h4{  font-size: 50px;}
+h5{  font-size: 45px;}
+h6{  font-size: 38px;}
+
+p{
+  font-family: 'advent_prolight';
+  font-size: 22px;
+}
+a{
+  font-family: 'advent_prolight';
+  font-size: 22px;
+  color: black;
+}
+a:hover{
+  font-family: 'advent_prosemibold';
+  color: grey;
 }
 
 
