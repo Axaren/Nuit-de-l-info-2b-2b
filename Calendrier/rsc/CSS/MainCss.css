@@ -1,0 +1,123 @@
+/* def des Polices */
+@font-face {
+    font-family: 'advent_probold';
+    src: url('/rsc/font/adventpro_bold_macroman/adventpro-bold-webfont.eot');
+    src: url('/rsc/font/adventpro_bold_macroman/adventpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/rsc/font/adventpro_bold_macroman/adventpro-bold-webfont.woff2') format('woff2'),
+         url('/rsc/font/adventpro_bold_macroman/adventpro-bold-webfont.woff') format('woff'),
+         url('/rsc/font/adventpro_bold_macroman/adventpro-bold-webfont.ttf') format('truetype'),
+         url('/rsc/font/adventpro_bold_macroman/adventpro-bold-webfont.svg#advent_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'advent_proextralight';
+    src: url('/rsc/font/adventpro_extralight_macroman/adventpro-extralight-webfont.eot');
+    src: url('/rsc/font/adventpro_extralight_macroman/adventpro-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/rsc/font/adventpro_extralight_macroman/adventpro-extralight-webfont.woff2') format('woff2'),
+         url('/rsc/font/adventpro_extralight_macroman/adventpro-extralight-webfont.woff') format('woff'),
+         url('/rsc/font/adventpro_extralight_macroman/adventpro-extralight-webfont.ttf') format('truetype'),
+         url('/rsc/font/adventpro_extralight_macroman/adventpro-extralight-webfont.svg#advent_proextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'advent_prolight';
+    src: url('/rsc/font/adventpro_light_macroman/adventpro-light-webfont.eot');
+    src: url('/rsc/font/adventpro_light_macroman/adventpro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/rsc/font/adventpro_light_macroman/adventpro-light-webfont.woff2') format('woff2'),
+         url('/rsc/font/adventpro_light_macroman/adventpro-light-webfont.woff') format('woff'),
+         url('/rsc/font/adventpro_light_macroman/adventpro-light-webfont.ttf') format('truetype'),
+         url('/rsc/font/adventpro_light_macroman/adventpro-light-webfont.svg#advent_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'advent_promedium';
+    src: url('/rsc/font/adventpro_medium_macroman/adventpro-medium-webfont.eot');
+    src: url('/rsc/font/adventpro_medium_macroman/adventpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/rsc/font/adventpro_medium_macroman/adventpro-medium-webfont.woff2') format('woff2'),
+         url('/rsc/font/adventpro_medium_macroman/adventpro-medium-webfont.woff') format('woff'),
+         url('/rsc/font/adventpro_medium_macroman/adventpro-medium-webfont.ttf') format('truetype'),
+         url('/rsc/font/adventpro_medium_macroman/adventpro-medium-webfont.svg#advent_promedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'advent_proregular';
+    src: url('/rsc/font/adventpro_regular_macroman/adventpro-regular-webfont.eot');
+    src: url('/rsc/font/adventpro_regular_macroman/adventpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/rsc/font/adventpro_regular_macroman/adventpro-regular-webfont.woff2') format('woff2'),
+         url('/rsc/font/adventpro_regular_macroman/adventpro-regular-webfont.woff') format('woff'),
+         url('/rsc/font/adventpro_regular_macroman/adventpro-regular-webfont.ttf') format('truetype'),
+         url('/rsc/font/adventpro_regular_macroman/adventpro-regular-webfont.svg#advent_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'advent_prosemibold';
+    src: url('/rsc/font/adventpro_semibold_macroman/adventpro-semibold-webfont.eot');
+    src: url('/rsc/font/adventpro_semibold_macroman/adventpro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/rsc/font/adventpro_semibold_macroman/adventpro-semibold-webfont.woff2') format('woff2'),
+         url('/rsc/font/adventpro_semibold_macroman/adventpro-semibold-webfont.woff') format('woff'),
+         url('/rsc/font/adventpro_semibold_macroman/adventpro-semibold-webfont.ttf') format('truetype'),
+         url('/rsc/font/adventpro_semibold_macroman/adventpro-semibold-webfont.svg#advent_prosemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'advent_prothin';
+    src: url('/rsc/font/adventpro_thin_macroman/adventpro-thin-webfont.eot');
+    src: url('/rsc/font/adventpro_thin_macroman/adventpro-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/rsc/font/adventpro_thin_macroman/adventpro-thin-webfont.woff2') format('woff2'),
+         url('/rsc/font/adventpro_thin_macroman/adventpro-thin-webfont.woff') format('woff'),
+         url('/rsc/font/adventpro_thin_macroman/adventpro-thin-webfont.ttf') format('truetype'),
+         url('/rsc/font/adventpro_thin_macroman/adventpro-thin-webfont.svg#advent_prothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+/*Réinitialisation des attribues*/
+body{
+  margin: 0px;
+}
+
+header p
+{
+  margin-top: 0px;
+}
+header h1
+{
+  font-family: 'advent_probold';
+}
+
+/*Généralité*/
+
+.Page{
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+/*Header*/
+
+/*Corp*/
+
+/*Footer*/
