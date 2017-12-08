@@ -130,7 +130,7 @@ header h1, footer
 
 /*Généralité*/
 
-.Page{
+#Page{
   text-align: center;
 }
 
@@ -140,7 +140,7 @@ p {
 
 /*Header*/
 
-.Page header{
+header{
 background: url("image/motif-web.jpg") repeat;
 }
 
