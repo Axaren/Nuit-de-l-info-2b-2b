@@ -12,6 +12,24 @@
         <p><img src="rsc/Image/Ubisoft.jpg" alt="Ubisoft"></p>
         <h1>dkbnwckb</h1>
       </header>
+			<form method="post" action="index.php">
+<p>
+ <select name="tests" id="test">
+		 <option value="test">Test</option>
+		 <option value="pastest">Pas de test</option>
+ </select>
+ <input type="submit" value="Envoyer" />
+</p>
+</form>
+<?php
+if (!empty($_POST["tests"])) {
+	if ($_POST["tests"] === "test") {
+		echo "<section>";
+		echo "<p><img src=\"rsc/Image/Calendrier.png\" alt=\"Calendrier\"></p>";
+		echo "</section>";
+	}
+}
+?>
       <section>
         <p><img src="rsc/Image/Calendrier.png" alt="Calendrier"></p>
       </section>
