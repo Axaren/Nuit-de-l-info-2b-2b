@@ -1,3 +1,54 @@
-body{
-	text-align: center;
+/*Général*/
+* {
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    background: #9f9f9f;
+    width: 60%;
+    margin: auto;
+}
+
+/*Nav*/
+nav {
+    background: white;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px){
+    nav a{
+
+    }
+
+}
+nav a {
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: inherit;
+}
+
+nav a:hover, nav a#actuelle {
+    border-bottom: black solid 4px;
+}
+
+/*Section*/
+section {
+    background: white;
+}
+
+section p{
+    width: 80%;
+    margin: auto;
 }
