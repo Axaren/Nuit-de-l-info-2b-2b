@@ -5,14 +5,15 @@
 
 body {
     text-align: center;
-    background: #9f9f9f;
+    /*background: #9f9f9f;*/
     width: 60%;
     margin: auto;
+    background: url("secu3.jpg")  center;
 }
 
 /*Nav*/
 nav {
-    background: white;
+    background: lightgrey;
     margin-top: 30px;
     margin-bottom: 50px;
 }
@@ -45,10 +46,17 @@ nav a:hover, nav a#actuelle {
 
 /*Section*/
 section {
-    background: white;
+    background: lightgrey;
 }
 
 section p{
     width: 80%;
     margin: auto;
+}
+
+section ul{
+    list-style: none;
+}
+section h1,h2,ul {
+    margin : 15px;
 }

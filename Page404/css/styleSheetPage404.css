@@ -6,14 +6,11 @@ body{
 }
 
 
-#fond_de_la_page {
-
-}
 
 #jeu canvas{
   position: absolute;
-  left: 26.8%;
-  top: 1500px;
+  left: 33.5%;
+  top: 293px;
 }
 #jeu img
 {
