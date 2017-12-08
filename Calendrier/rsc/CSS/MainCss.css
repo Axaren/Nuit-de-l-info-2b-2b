@@ -141,9 +141,115 @@ p {
 /*Header*/
 
 header{
-background: url("Image_Fond/motif-web") repeat;
+background: url("image/motif-web.jpg") repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*Corp*/
+section img{
+  display: inline-block;
+}
+section{
+  background: url("image/motif-web1.jpg") repeat center;
+  }
+#case1{
+  top:650px;
+  left: 78px;
+}
+#case2{
+  top:643px;
+  left: 205px;
+}
+#case3{
+  top:643px;
+  left: 63px;
+}/*
+#case4{
+  top:643px;
+  left: 63px;
+}
+#case5{
+  top:643px;
+  left: 63px;
+}
+#case6{
+  top:643px;
+  left: 63px;
+}
+#case7{
+  top:643px;
+  left: 63px;
+}
+#case8{
+  top:643px;
+  left: 63px;
+}
+#case9{
+  top:643px;
+  left: 63px;
+}
+#case10{
+  top:643px;
+  left: 63px;
+}
+#case11{
+  top:643px;
+  left: 63px;
+}
+#case12{
+  top:643px;
+  left: 63px;
+}
+#case13{
+  top:643px;
+  left: 63px;
+}
+#case14{
+  top:643px;
+  left: 63px;
+}
+#case15{
+  top:643px;
+  left: 63px;
+}
+#case16{
+  top:643px;
+  left: 63px;
+}
+#case17{
+  top:643px;
+  left: 63px;
+}
+#case18{
+  top:643px;
+  left: 63px;
+}
+#case19{
+  top:643px;
+  left: 63px;
+}
+#case20{
+  top:643px;
+  left: 63px;
+}
+#case21{
+  top:643px;
+  left: 63px;
+}
+#case22{
+  top:643px;
+  left: 63px;
+}
+#case23{
+  top:643px;
+  left: 63px;
+}
+#case24{
+  top:643px;
+  left: 63px;
+}*/
 
 /*Footer*/
