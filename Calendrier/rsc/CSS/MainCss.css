@@ -108,12 +108,14 @@ a:hover{
   color: grey;
 }
 
+h1 {
+  text-align: center;
+}
 
 
 
 
-
-/*Réinitialisation des attribues*/
+/*Réinitialisation des attribus*/
 body{
   margin: 0px;
 }
@@ -130,7 +132,7 @@ header h1, footer
 
 /*Généralité*/
 
-#Page{
+.Page{
   text-align: center;
 }
 
@@ -141,7 +143,11 @@ p {
 /*Header*/
 
 header{
-background: url("image/motif-web.jpg") repeat;
+background: url("image/motif-web.jpg") repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*Corp*/
@@ -152,104 +158,103 @@ section{
   background: url("image/motif-web1.jpg") repeat center;
   }
 #case1{
-  top:650px;
-  left: 78px;
+  top:649px;
+  left: 80px;
 }
 #case2{
-  top:643px;
-  left: 205px;
+  top:646px;
+  left: 203px;
 }
 #case3{
-  top:643px;
-  left: 63px;
-}/*
+  top:639px;
+  left: 261px;
+}
 #case4{
-  top:643px;
-  left: 63px;
+  top:607px;
+  left: 392px;
 }
 #case5{
-  top:643px;
-  left: 63px;
+  top:606px;
+  left: 570px;
 }
 #case6{
-  top:643px;
-  left: 63px;
+  top:590px;
+  left: 664px;
 }
 #case7{
-  top:643px;
-  left: 63px;
+  top:591px;
+  left: 802px;
 }
 #case8{
-  top:643px;
-  left: 63px;
+  top:624px;
+  left: 925px;
 }
 #case9{
-  top:643px;
-  left: 63px;
+  top:743px;
+  left: 219px;
 }
 #case10{
-  top:643px;
-  left: 63px;
+  top:770px;
+  left: 350px;
 }
 #case11{
-  top:643px;
-  left: 63px;
+  top:742px;
+  left: 463px;
 }
 #case12{
-  top:643px;
-  left: 63px;
+  top:693px;
+  left: 624px;
 }
 #case13{
-  top:643px;
-  left: 63px;
+  top:720px;
+  left: 777px;
 }
 #case14{
-  top:643px;
-  left: 63px;
+  top:733px;
+  left: 907px;
 }
 #case15{
-  top:643px;
-  left: 63px;
+  top:895px;
+  left: 248px;
 }
 #case16{
-  top:643px;
-  left: 63px;
+  top:957px;
+  left: 387px;
 }
 #case17{
-  top:643px;
-  left: 63px;
+  top:879px;
+  left: 427px;
 }
 #case18{
-  top:643px;
-  left: 63px;
+  top:785px;
+  left: 600px;
 }
 #case19{
-  top:643px;
-  left: 63px;
+  top:971px;
+  left: 587px;
 }
 #case20{
-  top:643px;
-  left: 63px;
+  top:937px;
+  left: 694px;
 }
 #case21{
-  top:643px;
-  left: 63px;
+  top:1065px;
+  left: 469px;
 }
 #case22{
-  top:643px;
-  left: 63px;
+  top:1157px;
+  left: 380px;
 }
 #case23{
-  top:643px;
-  left: 63px;
+  top:1184px;
+  left: 543px;
 }
 #case24{
-  top:643px;
-  left: 63px;
-}*/
+  top:1345px;
+  left: 486px;
+}
 
 /*Footer*/
-
 footer{
   background: url("image/motif-web.jpg") repeat;
 }

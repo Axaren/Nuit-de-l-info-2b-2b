@@ -11,20 +11,17 @@
 	<?php for($i=1;$i<=24;$i++) {echo "#case{$i}{position: absolute;
 	visibility: 1000;}";} ?>
 
-
 	#fond{
 		position: relative;
 		left:10px;
 	}
-		<?php
 
-		 ?>
 	</style>
 	<body>
     <div id="Page">
       <header>
       	<p><img src="rsc/Image/Ubisoft.png" alt="Ubisoft"></p>
-        <h1>dkbnwckb</h1>
+        <h1>Calendrier de l'Avent</h1>
       </header>
       <section>
         <img src="rsc/Image/Calendrier.png" alt="Calendrier" id="fond">
@@ -55,7 +52,7 @@
 					$nbJ = cal_days_in_month(CAL_GREGORIAN, 12, 2017); // récuparation du nombre de jour dans le mois;
 					$Jour = date("w",mktime(0,0,0,12,1,2017)); // récuparation du jour a la quelle le mois commence
 					$tab_jours = array("Lu","Ma","Me","Je","Ve","Sa","Di"); // tableau de jour
-					if($mois==date("m"))$jourA = date("j"); // récuparation du Jour actuel
+					// if($mois==date("m"))$jourA = date("j"); // récuparation du Jour actuel
 					if ($Jour==0)$Jour=7; // pour le dimanche
 					$var=0;
 					$jours=$Jour+$nbJ;// nombre de jour afficher au min
