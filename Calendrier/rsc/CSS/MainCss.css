@@ -141,11 +141,7 @@ p {
 /*Header*/
 
 header{
-background: url("image/motif-web.jpg") repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+background: url("image/motif-web.jpg") repeat;
 }
 
 /*Corp*/

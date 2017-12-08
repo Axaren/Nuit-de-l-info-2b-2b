@@ -23,7 +23,7 @@
 	<body>
     <div id="Page">
       <header>
-      	<p><img src="rsc/Image/Ubisoft.jpg" alt="Ubisoft"></p>
+      	<p><img src="rsc/Image/Ubisoft.png" alt="Ubisoft"></p>
         <h1>dkbnwckb</h1>
       </header>
       <section>
