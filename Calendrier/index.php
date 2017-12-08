@@ -11,11 +11,14 @@
 	<?php for($i=1;$i<=24;$i++) {echo "#case{$i}{position: absolute;
 	visibility: 1000;}";} ?>
 
+
 	#fond{
 		position: relative;
 		left:10px;
 	}
+		<?php
 
+		 ?>
 	</style>
 	<body>
     <div id="Page">
@@ -25,10 +28,25 @@
       </header>
       <section>
         <img src="rsc/Image/Calendrier.png" alt="Calendrier" id="fond">
-				<?php for($i=1;$i<=24;$i++) {
-					echo "<img src=\"rsc/Image/Cases/case{$i}.png\" alt=\"case{$i}\" id=\"case{$i}\">";
+				<?php
+				$jourA;
+				if (isset($_REQUEST["jour"]))	$jourA = $_REQUEST["jour"];
+				else $jourA=date("j");
+				for($i=1;$i<=24;$i++) {
+					if ($i<=$jourA) echo "<img src=\"rsc/Image/Cases/case{$i}.png\" alt=\"case{$i}\" id=\"case{$i}\" onclick=\"gestionImage({$i},{$jourA});\">";
+					else echo "<img src=\"rsc/Image/Cases/case{$i}Cache.png\" alt=\"case{$i}\" id=\"case{$i}\" onclick=\"gestionImageFausse({$i},{$jourA});\">";
 				}
 				?>
+				<script type="text/javascript">
+					function gestionImage(id,jour){
+							var tab=["Vous avez obtenue [Far Cry 4]","Vous avez obtenue [Trival Pursuit]","Vous avez obtenue [Monopoly Plus]","Vous avez obtenue [Risk]","Vous avez obtenue [Drive Speedboat]","Vous avez obtenue [Tetris Ultimate]","Vous avez obtenue [Scrabble]","Vous avez obtenue [Rabbids Invasion]", "Vous avez obtenue [Just Dance 2017]", "Vous avez obtenue [Rainbow Six]","Vous avez obtenue [Assassin's Creed Identity]", "Vous avez obtenue [Far cry: Primal]","Vous avez obtenue [Assassin's Creed: Unity]", "Vous avez obtenue [The Division]", "Vous avez obtenue [Trackmania Turbo]\nLa vitesse c'est cool, mais la vie, c'est mieux", "Vous avez obtenue [Anno 2025]", "Vous avez obtenue [Grow Up]", "Vous avez obtenue [Just Dance 2016]", "Vous avez obtenue [Watch Dogs 2]", "Vous avez obtenue [Steep]", "Vous avez obtenue [For Honnor]", "Vous avez obtenue [Ghost Recon:WildLands]", "Vous avez obtenue [Mario + Rabbids Kingdom]\nUne tortue, un enfant sur la route, l'enjeux est le même : l'éviter!", "Vous avez obtenue [Assassin's creed origins]"];
+							alert(tab[id-1]);
+					}
+					function gestionImageFausse(id,jour){
+						var j = id-jour;
+						alert("                 cela est disponible dans "+j+" jour.\nRevenez plus tard pour découvrir votre récompence");
+					}
+				</script>
       </section>
 			<footer>
 			<form method="post" action="index.php">
@@ -46,13 +64,10 @@
 				if ($_REQUEST["tests"] === "test") {
 					echo "<div class=\"body\"><div class=\"container\"><div class=\"calendar-container\"><header><div class=\"day\">Décembre</div><div class=\"month\">2017</div></header>";
 					echo "<table class=\"calendar\">";
-					if (isset($_REQUEST["jour"]))	$jourA = $_REQUEST["jour"];
-					else $jourA=-1;
 					echo "<thead><tr>";
 					$nbJ = cal_days_in_month(CAL_GREGORIAN, 12, 2017); // récuparation du nombre de jour dans le mois;
 					$Jour = date("w",mktime(0,0,0,12,1,2017)); // récuparation du jour a la quelle le mois commence
 					$tab_jours = array("Lu","Ma","Me","Je","Ve","Sa","Di"); // tableau de jour
-					// if($mois==date("m"))$jourA = date("j"); // récuparation du Jour actuel
 					if ($Jour==0)$Jour=7; // pour le dimanche
 					$var=0;
 					$jours=$Jour+$nbJ;// nombre de jour afficher au min
